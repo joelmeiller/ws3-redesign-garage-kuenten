@@ -1,0 +1,156 @@
+/* ------------------- General ------------------- */
+
+@media (min-width: 601px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .mobile-hide {
+      display: none;
+    }
+  }
+
+  body {
+    border: 10px solid red;
+    height: 100vh;
+    background: darkred;
+  }
+
+  /* ------------------- Header ------------------- */
+
+  header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  
+  header.start-page {
+    height: 300px;
+  }
+  
+  header.sub-page {
+    height: 100px;
+  }
+
+  
+  header figure {
+    position: relative;
+    float: left;
+    margin: 0;
+  }
+
+  header figure:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0, 0.7);
+    -moz-transition: background 3s ease-in-out;
+    -webkit-transition: background 3s ease-in-out;
+    -o-transition: background 3s ease-in-out;
+    transition: background 3s ease-in-out;
+  }
+
+  header figure:hover:before {
+    background: rgba(0,0,0, 0.2);
+  }
+
+  header figure img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+
+  header .icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  header .title {
+    position: absolute;
+    width: 100%;
+    text-align: center
+  }
+
+  
+  header .title h1 {
+    color: white;
+  }
+
+  @media (min-width: 601px) {
+    header.start-page .title {
+        top: 60px;
+    }
+
+    header.start-page .title h1 {
+        font-size: 3.0rem;
+        font-weight: bold;
+    }
+
+    header.sub-page .title {
+        top: 15px;
+    }
+    
+    header.sub-page .title h1 {
+        font-size: 1.8rem;
+        font-weight: normal;
+    }
+  }
+
+  @media (max-width: 600px) {
+    header.start-page {
+      height: 200px;
+    }
+
+    header.sub-page {
+      height: 75px;
+    }
+
+    header .icon {
+      top: 10px;
+      left: 10px;
+      width: 40px;
+      height: 40px;
+    }
+
+    header figure:before {
+      background: rgba(0,0,0, 0.5);
+    }
+
+    header .title {
+      top: 0;
+    }
+
+    header .title h1 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-top: 20px;
+    }
+
+    .fixed-action-btn .btn-floating.btn-large {
+      margin: 10px 15px;
+    }
+  }
+
+
+  /* ------------------- Summary ------------------- */
+
+  summary {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+
+  summary p {
+    color: white;
+  }

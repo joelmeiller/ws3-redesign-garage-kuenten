@@ -28,11 +28,11 @@
   }
   
   header.start-page {
-    height: 300px;
+    max-height: 300px;
   }
   
   header.sub-page {
-    height: 100px;
+    max-height: 100px;
   }
 
   
@@ -40,6 +40,7 @@
     position: relative;
     float: left;
     margin: 0;
+    width: 100%;
   }
 
   header figure:before {

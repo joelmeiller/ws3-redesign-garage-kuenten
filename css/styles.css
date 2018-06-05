@@ -155,3 +155,22 @@
   summary p {
     color: white;
   }
+
+
+/* ------------------- Offering ------------------- */
+
+
+#offer-bg-cont{
+  background-color: transparent;
+}
+
+.col > p{
+  color: black;
+  background-color: white;
+  text-align: center;
+  min-height: 80px;
+
+}
+
+
+/* ------------------- Offering ------------------- */

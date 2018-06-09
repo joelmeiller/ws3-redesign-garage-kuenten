@@ -1,4 +1,13 @@
 /* ------------------- General ------------------- */
+:root {
+  --main-primary-color: rgb(167, 0, 0);
+  --main-font-color: #c2c2c2;
+  --main-font-color-accent: #ffffff;
+  --main-bg-card-color: rgba(167, 0, 0, 0.32);
+  --main-bg-card-color-hover: rgba(223, 65, 44, 0.9);
+  --main-bg-card-color-primary: rgb(164, 46, 30, 0.9);
+}
+
 
 @media (min-width: 601px) {
   .mobile-only {
@@ -19,7 +28,7 @@ html, body {
 }
 body {
   background: darkred;
-  border: 4px solid rgb(167, 0, 0);
+  border: 4px solid var(--main-primary-color);
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -62,7 +71,6 @@ body {
   position: relative;
   width: 100%;
   padding: 0 5%;
-  max-width: 1000px;
   overflow-y: scroll;
 }
 /* ------------------- Header ------------------- */
@@ -70,7 +78,6 @@ body {
 header {
   position: relative;
   width: 100%;
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,15 +119,16 @@ header .icon {
 
 header .title {
   position: absolute;
-  width: 90%;
-  text-align: center
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
 }
 header .title h2 {
-  color: #c2c2c2;
+  color: var(--main-font-color);
   margin: 0;
 }
 header .title h1 {
-  color: white;
+  color: var(--main-font-color-accent);
   margin: 0;
   font-weight: bold;
 }
@@ -128,8 +136,7 @@ header .title h1 {
 @media (min-width: 601px) {
   header.start-page .title {
     top: 30px;
-    min-width: 700px;
-    pointer-events: none;
+    min-width: 600px;
   }
 
   header.start-page .title h1 {
@@ -145,8 +152,11 @@ header .title h1 {
   }
 
   header.sub-page .title h1 {
-    font-size: 1.8rem;
-    font-weight: normal;
+    font-size: 2.5rem;
+  }
+
+  header.sub-page .title h2 {
+    font-size: 1.0rem;
   }
 
   header .logo {
@@ -202,6 +212,12 @@ header .title h1 {
   }
 }
 
+main {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ------------------- Summary ------------------- */
 summary {
   font-size: 2rem;
@@ -222,22 +238,22 @@ summary.primary {
   margin-bottom: 30px; 
 }
 summary.primary:hover {
-  background-color: rgba(223, 65, 44, 0.9);
+  background-color: yellow;
 }
 
 summary.secondary {
-  background-color: rgba(167, 0, 0, 0.2);
+  background-color: var(--main-bg-card-color);
   box-shadow: 0 2px 2px 0 rgba(167, 0, 0, 0.9);
 }
 summary.secondary:hover {
-  background-color: rgba(223, 65, 44, 0.9);
+  background-color: var(--main-bg-card-color-hover);
 }
 
 
 
 
 summary p {
-  color: #c2c2c2;
+  color: var(--main-font-color);
   text-shadow: 0 2px 2px rgba(167, 0, 0, 0.9);
   margin: 0 0;
 }
@@ -247,7 +263,7 @@ summary p.text__small {
 }
 
 summary:hover p {
-  color: white;
+  color: var(--main-font-color-accent);
 }
 
 @media (max-width: 600px) {
@@ -264,13 +280,25 @@ summary:hover p {
 }
 
 .col > p{
-  color: black;
-  background-color: white;
+  color: var(--main-font-color);
+  background-color: var(--main-bg-card-color);
   text-align: center;
   min-height: 80px;
 
 }
 
+/* override materialize CSS colors */
+#offering .card {
+  background-color: var(--main-bg-card-color);
+}
+#offering .card .card-image img {
+  height: 150px;
+  object-fit: cover;
+}
+#offering .card .card-content {
+  color: var(--main-font-color);
+  padding: 8px 20px 12px 20px;
+}
 
 /* ------------------- Form colors ------------------- */
 /* label color */

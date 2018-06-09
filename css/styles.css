@@ -6,6 +6,7 @@
   --main-bg-card-color: rgba(167, 0, 0, 0.32);
   --main-bg-card-color-hover: rgba(223, 65, 44, 0.9);
   --main-bg-card-color-primary: rgb(164, 46, 30, 0.9);
+  --main-bg-card-color-primary-hover: orangered;
 }
 
 
@@ -156,7 +157,7 @@ header .title h1 {
   }
 
   header.sub-page .title h2 {
-    font-size: 1.0rem;
+    font-size: 1.5rem;
   }
 
   header .logo {
@@ -222,7 +223,7 @@ main {
 summary {
   font-size: 2rem;
   padding: 1.2rem 20px;
-  
+  width: 100%;
   text-align: center;
 }
 
@@ -238,7 +239,7 @@ summary.primary {
   margin-bottom: 30px; 
 }
 summary.primary:hover {
-  background-color: yellow;
+  background-color: var(--main-bg-card-color-primary-hover);
 }
 
 summary.secondary {
@@ -288,14 +289,14 @@ summary:hover p {
 }
 
 /* override materialize CSS colors */
-#offering .card {
+.overwrite .card {
   background-color: var(--main-bg-card-color);
 }
-#offering .card .card-image img {
+.overwrite .card .card-image img {
   height: 150px;
   object-fit: cover;
 }
-#offering .card .card-content {
+.overwrite .card .card-content {
   color: var(--main-font-color);
   padding: 8px 20px 12px 20px;
 }
@@ -321,4 +322,13 @@ summary:hover p {
 textarea:focus {
     border-bottom: 1px solid #fff !important;
     box-shadow: 0 1px 0 0 #fff !important;
+}
+
+.overwrite .btn {
+  width: 100%;
+  background-color: var(--main-bg-card-color-primary);
+}
+
+.overwrite .btn:hover {
+  background-color: var(--main-bg-card-color-primary-hover);
 }

@@ -2,15 +2,15 @@
 
 @media (min-width: 601px) {
     .mobile-only {
-      display: none;
+        display: none;
     }
-  }
+}
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     .mobile-hide {
-      display: none;
+        display: none;
     }
-  }
+}
 
 
 html {
@@ -18,15 +18,11 @@ html {
 }
 body {
     min-height: 100%;
-}
-
-body {
     border: 10px solid red;
-    height: 100vh;
     background: darkred;
 }
 
-  /* ------------------- Header ------------------- */
+/* ------------------- Header ------------------- */
 
   header {
     display: flex;
@@ -36,25 +32,24 @@ body {
     width: 100%;
     overflow: hidden;
     margin-bottom: 50px;
-  }
-  
-  header.start-page {
-    max-height: 300px;
-  }
-  
-  header.sub-page {
-    max-height: 100px;
-  }
+}
 
-  
-  header figure {
+header.start-page {
+    max-height: 300px;
+}
+
+header.sub-page {
+    max-height: 150px;
+}
+
+header figure {
     position: relative;
     float: left;
     margin: 0;
     width: 100%;
-  }
+}
 
-  header figure:before {
+header figure:before {
     content: "";
     display: block;
     position: absolute;
@@ -62,43 +57,41 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     -moz-transition: background 3s ease-in-out;
     -webkit-transition: background 3s ease-in-out;
     -o-transition: background 3s ease-in-out;
     transition: background 3s ease-in-out;
-  }
+}
 
-  header figure:hover:before {
-    background: rgba(0,0,0, 0.2);
-  }
+header figure:hover:before {
+    background: rgba(0, 0, 0, 0.2);
+}
 
-  header figure img {
+header figure img {
     object-fit: cover;
     width: 100%;
-  }
+}
 
-
-  header .icon {
+header .icon {
     position: absolute;
     top: 20px;
     left: 20px;
     width: 60px;
     height: 60px;
-  }
+}
 
-  header .title {
+header .title {
     position: absolute;
     width: 100%;
     text-align: center
-  }
+}
 
-  
-  header .title h1 {
+header .title h1 {
     color: white;
-  }
+}
 
-  @media (min-width: 601px) {
+@media (min-width: 601px) {
     header.start-page .title {
         top: 60px;
     }
@@ -111,61 +104,60 @@ body {
     header.sub-page .title {
         top: 15px;
     }
-    
+
     header.sub-page .title h1 {
         font-size: 1.8rem;
         font-weight: normal;
     }
-  }
+}
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     header.start-page {
-      height: 200px;
+        height: 200px;
     }
 
     header.sub-page {
-      height: 75px;
+        height: 75px;
     }
 
     header .icon {
-      top: 10px;
-      left: 10px;
-      width: 40px;
-      height: 40px;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
     }
 
     header figure:before {
-      background: rgba(0,0,0, 0.5);
+        background: rgba(0, 0, 0, 0.5);
     }
 
     header .title {
-      top: 0;
+        top: 0;
     }
 
     header .title h1 {
-      font-size: 1.5rem;
-      font-weight: normal;
-      margin-top: 20px;
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin-top: 20px;
     }
 
     .fixed-action-btn .btn-floating.btn-large {
-      margin: 10px 15px;
+        margin: 10px 15px;
     }
-  }
+}
 
+/* ------------------- Summary ------------------- */
 
-  /* ------------------- Summary ------------------- */
-
-  summary {
+summary {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-  }
+}
 
-  summary p {
-    color: white;
-  }
+summary p {
+  color: white;
+}
 
 
 /* ------------------- Offering ------------------- */
@@ -184,4 +176,25 @@ body {
 }
 
 
-/* ------------------- Offering ------------------- */
+/* ------------------- Form colors ------------------- */
+/* label color */
+.input-field label {
+    color: #fff !important;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+    color: #fff !important;
+}
+
+/* label underline focus color */
+.input-field input:focus {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
+}
+
+/* label underline focus color */
+textarea:focus {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
+}

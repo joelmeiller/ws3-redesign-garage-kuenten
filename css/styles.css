@@ -14,15 +14,14 @@
 
 /* ------------------- Html & Body -----------------*/
 
-html {
+html, body {
   height: 100%;
 }
 body {
-  min-height: 100%;
   background: darkred;
   border: 4px solid rgb(167, 0, 0);
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 body {
@@ -40,7 +39,6 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  align-items: center;
   background-color: black;
   background-image: url('../resources/header.jpg');
   background-size: cover;
@@ -50,10 +48,6 @@ body {
 .page:before {
   position: absolute;
   content: ' ';
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
@@ -65,10 +59,11 @@ body {
 }
 
 .content {
-  position: absolute;
-  width: 95%;
-  height: 95%;
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
   max-width: 1000px;
+  overflow-y: scroll;
 }
 /* ------------------- Header ------------------- */
 
@@ -85,7 +80,7 @@ header {
 
 header.start-page {
   height: 38%;
-  min-height: 200px;
+  min-height: 250px;
   max-height: 400px;
 }
 
@@ -117,7 +112,7 @@ header .icon {
 
 header .title {
   position: absolute;
-  width: 70%;
+  width: 90%;
   text-align: center
 }
 header .title h2 {
@@ -133,6 +128,8 @@ header .title h1 {
 @media (min-width: 601px) {
   header.start-page .title {
     top: 30px;
+    min-width: 700px;
+    pointer-events: none;
   }
 
   header.start-page .title h1 {
@@ -190,7 +187,6 @@ header .title h1 {
   header.start-page .title {
     top: 20px;
     min-width: 360px;
-    width: 90%;
   }
 
   header.start-page .title h1 {

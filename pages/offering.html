@@ -14,10 +14,17 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   
   <!-- Materialize -->
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen"/>
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <!--Local styles-->
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -29,72 +36,90 @@
 </head>
 
 <body>
-  <!-- 1. Row -->
-  <header class="sub-page">
-    <figure>
-      <img class="responsive-img" alt="Dorfgarage Kuenten" src="../resources/header.jpg">
-    </figure>
-    
-    <div class="title">
-      <h1>Dorfgarage Künten</h1>
+  <div class="page">
+
+    <div class="content">
+      <!-- 1. Row -->
+      <header class="sub-page">
+        <a href="#">
+          <div class="logo">
+              <img class="icon" src="../resources/icon.png" />
+          </div>
+        </a>
+
+        <div class="title">
+          <h2><small>Dorfgarage</small></h2>
+          <h1>Meier <br class="mobile-only"/>& Staubli</h1>
+          <h2 style="margin-top: 5px;">Wir machen Ihr Auto fit!</h2>
+        </div>
+      </header>
+
+          
+      <main>
+        <div id="offer-bg-cont">
+
+          <div class="row">
+            <div class="col s12 m6 l3">
+              <p class="z-depth-1">Stundenansatz
+              <br> 90.- CHF
+              </p>
+            </div>
+            <div class="col s12 m6 l3">
+              <p class="z-depth-2">Abgastest Benzinmotor
+              <br> 70.- CHF
+              </p>
+            </div>
+            <div class="col s12 m6 l3">
+              <p class="z-depth-3">Abgastest Dieselmotor
+              <br> 90.- CHF
+              </p>
+            </div>
+            <div class="col s12 m6 l3">
+              <p class="z-depth-4">Radwechsel & Auswuchten
+              <br> 52.- CHF
+              </p>
+            </div>
+
+            <div class="col s12 mobile-hide">
+              <br>
+            </div>
+
+            <div class="col s12 mobile-hide">
+              <a href="./contact.html">
+                <summary class="orange">
+                  <p>Kontakt</p>
+                </summary>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telefon -->
+        <section class="row">
+          <div class="col s12">
+            <a href="tel:+41564967029">
+              <summary class="primary">
+                <p class="text__small">Rufen Sie uns an</p>
+                <p>+41 56 496 70 29</p>
+              </summary>
+            </a>
+          </div>
+        </section>
+
+        <!-- Lage & Kontakt -->
+        <section class="row">
+          <div class="col s12">
+            <a href="./pages/contact.html">
+              <summary class="secondary">
+                <p>Lage <small>&</small> Kontakt</p>
+              </summary>
+            </a>
+          </div>
+        </section>
+            
+      </main>
     </div>
-
-    <a href="../index.html"><img class="icon" alt="Telefon" src="../resources/icon.png" /></a>
-    
-  </header>
-
-        
-  <main class="container">
-    <div id="offer-bg-cont">
-
-      <div class="row">
-        <div class="col s12 m6 l3">
-          <p class="z-depth-1">Stundenansatz
-          <br> 90.- CHF
-          </p>
-        </div>
-        <div class="col s12 m6 l3">
-          <p class="z-depth-2">Abgastest Benzinmotor
-          <br> 70.- CHF
-          </p>
-        </div>
-        <div class="col s12 m6 l3">
-          <p class="z-depth-3">Abgastest Dieselmotor
-          <br> 90.- CHF
-          </p>
-        </div>
-        <div class="col s12 m6 l3">
-          <p class="z-depth-4">Radwechsel & Auswuchten
-          <br> 52.- CHF
-          </p>
-        </div>
-
-        <div class="col s12 mobile-hide">
-          <br>
-        </div>
-
-        <div class="col s12 mobile-hide">
-          <a href="./contact.html">
-            <summary class="orange">
-              <p>Kontakt</p>
-            </summary>
-          </a>
-        </div>
-
-        <div class="fixed-action-btn mobile-only">
-          <a class="btn-floating btn-large red" href="telto:0049791231234">
-            <i class="large material-icons">phone</i>
-          </a>
-        </div>
-
-
-
-      </div>
-
-
-    </div>
-
-  </main>
+  </div>
 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/materialize.min.js"></script>

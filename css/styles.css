@@ -87,8 +87,8 @@ header {
 }
 
 header.start-page {
-  height: 38%;
-  min-height: 250px;
+  height: 33%;
+  min-height: 200px;
   max-height: 400px;
 }
 
@@ -134,7 +134,25 @@ header .title h1 {
   font-weight: bold;
 }
 
+header.sub-page .title {
+  top: 15px;
+}
+
+header.sub-page .title h1 {
+  font-size: 2.2rem;
+}
+
+header.sub-page .title h2 {
+  font-size: 1.5rem;
+}
+
 @media (min-width: 601px) {
+  header.start-page {
+    height: 33%;
+    min-height: 250px;
+    max-height: 400px;
+  }
+
   header.start-page .title {
     top: 30px;
     min-width: 600px;
@@ -148,14 +166,10 @@ header .title h1 {
     font-size: 3.5rem;
   }
 
-  header.sub-page .title {
-    top: 15px;
-  }
-
   header.sub-page .title h1 {
     font-size: 2.5rem;
   }
-
+  
   header.sub-page .title h2 {
     font-size: 1.5rem;
   }
@@ -195,21 +209,35 @@ header .title h1 {
     height: 50px;
   }
 
+  header.start-page {
+    height: 33%;
+    min-height: 200px;
+    max-height: 300px;
+  }
+
   header.start-page .title {
     top: 20px;
-    min-width: 360px;
+    min-width: 320px;
   }
 
   header.start-page .title h1 {
-    font-size: 3.5rem;
+    font-size: 3.0rem;
   }
 
   header.start-page .title h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
-  .fixed-action-btn .btn-floating.btn-large {
-    margin: 10px 15px;
+  header.sub-page .title {
+    text-align: right;
+  }
+
+  header.sub-page .title h1 {
+    font-size: 2.0rem;
+  }
+  
+  header.sub-page .title h2 {
+    font-size: 1.5rem;
   }
 }
 

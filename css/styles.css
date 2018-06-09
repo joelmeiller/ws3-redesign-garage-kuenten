@@ -25,6 +25,10 @@ body {
   overflow-y: scroll;
 }
 
+body {
+  font-family: 'Didact Gothic';font-size: 22px;
+}
+
 /* ------------------- Page -----------------*/
 
 .page {

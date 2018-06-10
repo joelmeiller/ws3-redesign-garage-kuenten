@@ -378,14 +378,14 @@ textarea:focus {
 /* ------------- Page Transition ------------ */
 #content {
 	opacity: 0;
-	transition: opacity .125s ease-in-out;
- 	-moz-transition: opacity .125s ease-in-out;
- 	-webkit-transition: opacity .125s ease-in-out;
+	transition: opacity .125s ease-out;
+ 	-moz-transition: opacity .125s ease-out;
+ 	-webkit-transition: opacity .125s ease-out;
 }
 
 #content.visible {
 	opacity: 1;
-	transition: opacity .125s ease-in-out;
- 	-moz-transition: opacity .125s ease-in-out;
- 	-webkit-transition: opacity .125s ease-in-out;
+	transition: opacity .125s ease-in;
+ 	-moz-transition: opacity .125s ease-in;
+ 	-webkit-transition: opacity .125s ease-in;
 }

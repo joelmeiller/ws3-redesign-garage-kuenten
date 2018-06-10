@@ -1,168 +1,391 @@
 /* ------------------- General ------------------- */
+:root {
+  --main-primary-color: rgb(168, 0, 0);
+  --main-font-color: #c2c2c2;
+  --main-font-color-accent: #ffffff;
+  --main-bg: rgb(75, 0, 0);
+  --main-bg-card-color: rgba(167, 0, 0, 0.45);
+  --main-bg-card-color-hover: rgba(223, 65, 44, 0.9);
+  --main-bg-card-color-primary: rgba(164, 46, 30, 0.9);
+  --main-bg-card-color-primary-hover: orange;
+  --main-bg-modal-color: rgb(164, 46, 30);
+}
+
 
 @media (min-width: 601px) {
-    .mobile-only {
+  .mobile-only {
       display: none;
-    }
   }
+}
 
-  @media (max-width: 600px) {
-    .mobile-hide {
+@media (max-width: 600px) {
+  .mobile-hide {
       display: none;
-    }
   }
+}
 
+/* ------------------- Html & Body -----------------*/
 
-html {
-    height: 100%;
+html, body {
+  height: 100%;
 }
 body {
-    min-height: 100%;
+  background: var(--main-bg);
+  border: 4px solid var(--main-primary-color);
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
-    border: 10px solid red;
-    height: 100vh;
-    background: darkred;
+  font-family: 'Didact Gothic';font-size: 22px;
 }
 
-  /* ------------------- Header ------------------- */
+/* ------------------- Page -----------------*/
 
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 50px;
-  }
-  
+#page {
+  position: absolute;
+  width: calc(100vw - 8px);
+  height: calc(100vh - 8px);
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+  background-image: url('../resources/header.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#page:before {
+  position: absolute;
+  content: ' ';
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.95);
+  -moz-transition: background 3s ease-in-out;
+  -webkit-transition: background 3s ease-in-out;
+  -o-transition: background 3s ease-in-out;
+  transition: background 3s ease-in-out;
+}
+
+#content {
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
+  overflow-y: scroll;
+}
+/* ------------------- Header ------------------- */
+
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+header.start-page {
+  height: 33%;
+  min-height: 200px;
+  max-height: 400px;
+}
+
+header.sub-page {
+  height: 15%;
+  max-height: 150px;
+}
+
+header .logo {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+
+header .logo:after {
+  position: absolute;
+  content: ' ';
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.95);
+}
+
+header .icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+header .title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+header .title h2 {
+  color: var(--main-font-color);
+  margin: 0;
+}
+header .title h1 {
+  color: var(--main-font-color-accent);
+  margin: 0;
+  font-weight: bold;
+}
+
+header.sub-page .title {
+  top: 15px;
+}
+
+header.sub-page .title h1 {
+  font-size: 2.2rem;
+}
+
+header.sub-page .title h2 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 601px) {
   header.start-page {
-    max-height: 300px;
+    height: 33%;
+    min-height: 250px;
+    max-height: 400px;
+  }
+
+  header.start-page .title {
+    top: 30px;
+    min-width: 600px;
+  }
+
+  header.start-page .title h1 {
+    font-size: 5.5rem;
+  }
+
+  header.start-page .title h2 {
+    font-size: 3.5rem;
+  }
+
+  header.sub-page .title h1 {
+    font-size: 2.5rem;
   }
   
-  header.sub-page {
-    max-height: 100px;
+  header.sub-page .title h2 {
+    font-size: 1.5rem;
   }
 
-  
-  header figure {
-    position: relative;
-    float: left;
-    margin: 0;
-    width: 100%;
+  header .logo {
+    width: 70px;
+    height: 70px;
   }
-
-  header figure:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0, 0.7);
-    -moz-transition: background 3s ease-in-out;
-    -webkit-transition: background 3s ease-in-out;
-    -o-transition: background 3s ease-in-out;
-    transition: background 3s ease-in-out;
-  }
-
-  header figure:hover:before {
-    background: rgba(0,0,0, 0.2);
-  }
-
-  header figure img {
-    object-fit: cover;
-    width: 100%;
-  }
-
 
   header .icon {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     width: 60px;
     height: 60px;
   }
 
-  header .title {
-    position: absolute;
-    width: 100%;
-    text-align: center
+  header .logo:after {
+    background: rgba(0, 0, 0, 0.3);
+    -moz-transition: background 0.3s ease-in-out;
+    -webkit-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+  }
+  header .logo:hover:after {
+    background: rgba(0, 0, 0, 0.0);
+  }
+}
+
+@media (max-width: 600px) {
+  header .logo {
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
   }
 
+  header .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  header.start-page {
+    height: 33%;
+    min-height: 200px;
+    max-height: 300px;
+  }
+
+  header.start-page .title {
+    top: 20px;
+    min-width: 320px;
+  }
+
+  header.start-page .title h1 {
+    font-size: 3.0rem;
+  }
+
+  header.start-page .title h2 {
+    font-size: 1.8rem;
+  }
+
+  header.sub-page .title {
+    text-align: right;
+  }
+
+  header.sub-page .title h1 {
+    font-size: 2.0rem;
+  }
   
-  header .title h1 {
-    color: white;
+  header.sub-page .title h2 {
+    font-size: 1.5rem;
   }
+}
 
-  @media (min-width: 601px) {
-    header.start-page .title {
-        top: 60px;
-    }
+main {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    header.start-page .title h1 {
-        font-size: 3.0rem;
-        font-weight: bold;
-    }
+/* ------------------- Summary ------------------- */
+summary {
+  font-size: 2rem;
+  padding: 1.2rem 20px;
+  width: 100%;
+  text-align: center;
+}
 
-    header.sub-page .title {
-        top: 15px;
-    }
-    
-    header.sub-page .title h1 {
-        font-size: 1.8rem;
-        font-weight: normal;
-    }
-  }
+summary {
+  -moz-transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+summary.primary {
+  background-color: rgb(164, 46, 30, 0.9);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px; 
+}
+summary.primary:hover {
+  background-color: var(--main-bg-card-color-primary-hover);
+}
 
-  @media (max-width: 600px) {
-    header.start-page {
-      height: 200px;
-    }
-
-    header.sub-page {
-      height: 75px;
-    }
-
-    header .icon {
-      top: 10px;
-      left: 10px;
-      width: 40px;
-      height: 40px;
-    }
-
-    header figure:before {
-      background: rgba(0,0,0, 0.5);
-    }
-
-    header .title {
-      top: 0;
-    }
-
-    header .title h1 {
-      font-size: 1.5rem;
-      font-weight: normal;
-      margin-top: 20px;
-    }
-
-    .fixed-action-btn .btn-floating.btn-large {
-      margin: 10px 15px;
-    }
-  }
+summary.secondary {
+  background-color: var(--main-bg-card-color);
+  box-shadow: 0 2px 2px 0 rgba(167, 0, 0, 0.9);
+}
+summary.secondary:hover {
+  background-color: var(--main-bg-card-color-hover);
+}
 
 
-  /* ------------------- Summary ------------------- */
 
+
+summary p {
+  color: var(--main-font-color);
+  text-shadow: 0 2px 2px rgba(167, 0, 0, 0.9);
+  margin: 0 0;
+}
+
+summary p.text__small {
+  font-size: 1.2rem;
+}
+
+summary:hover p {
+  color: var(--main-font-color-accent);
+}
+
+@media (max-width: 600px) {
   summary {
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-  }
+    font-size: 1.7rem;
+  }  
+}
 
-  summary p {
-    color: white;
-  }
+/* ------------------- Cart ------------------- */
+
+/* override materialize CSS colors */
+.materialize-overwrite .card {
+  background-color: var(--main-bg-card-color);
+}
+.materialize-overwrite .card .card-image img {
+  height: 150px;
+  object-fit: cover;
+}
+.materialize-overwrite .card .card-content {
+  color: var(--main-font-color);
+  padding: 8px 20px 12px 20px;
+}
+
+/* ------------------- Form ------------------- */
+/* label color */
+.input-field label {
+    color: #fff !important;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+    color: #fff !important;
+}
+
+/* label underline focus color */
+.input-field input:focus {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
+}
+
+/* label underline focus color */
+textarea:focus {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
+}
+
+.materialize-overwrite .btn {
+  width: 100%;
+  background-color: var(--main-bg-card-color-primary);
+}
+
+.materialize-overwrite .btn:hover {
+  background-color: var(--main-bg-card-color-primary-hover);
+}
+
+/* ------------------- Modal ------------------- */
+
+/* override materialize CSS colors */
+.materialize-overwrite .modal {
+  background-color: var(--main-bg-modal-color);
+  color: var(--main-font-color-accent);
+  outline: none;
+}
+
+.materialize-overwrite .modal .modal-content p {
+  text-align: center;
+}
+
+.materialize-overwrite .modal .modal-footer {
+  background-color: var(--main-bg-modal-color);
+  color: var(--main-font-color-accent);
+  font-weight: bold;
+}
+
+.materialize-overwrite .modal .modal-footer .btn-flat {
+  background-color: var(--main-bg-modal-color);
+  color: var(--main-font-color-accent);
+  font-weight: bold;
+}
+
+/* ------------- Page Transition ------------ */
+#content {
+	opacity: 0;
+	transition: opacity .125s ease-in-out;
+ 	-moz-transition: opacity .125s ease-in-out;
+ 	-webkit-transition: opacity .125s ease-in-out;
+}
+
+#content.visible {
+	opacity: 1;
+	transition: opacity .125s ease-in-out;
+ 	-moz-transition: opacity .125s ease-in-out;
+ 	-webkit-transition: opacity .125s ease-in-out;
+}

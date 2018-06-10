@@ -5,15 +5,15 @@
   <meta charset="utf-8">
 
   <title>Dorfgarage Kühnen</title>
-  <meta name="description" content="Responsive Prototype of Webpage for Dorfgarage Kühnen with mobile first approach.">
+  <meta name="description" content="Responsive Prototype of Webpage for Dorfgarage Meier & Staubli, Künten with mobile first approach.">
   <meta name="author" content="Joël Meiller">
 
-  <link rel="stylesheet" href="../css/styles.css">
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!--Local styles-->
+  <link rel="stylesheet" href="../css/styles.css?v=1.0">
   
   <!-- Materialize -->
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
@@ -29,27 +29,111 @@
 </head>
 
 <body>
-  <!-- 1. Row -->
-  <header class="sub-page">
-    <figure>
-      <img class="responsive-img" src="../resources/header.jpg">
-    </figure>
-    
-    <div class="title">
-      <h1>Dorfgarage Künten</h1>
-    </div>
+  <div id="page">
 
-    <a href="../index.html"><img class="icon" src="../resources/icon.png" /></a>
-    
-  </header>
+    <div id="content">
 
+      <header class="sub-page">
+        <a href="../index.html" class="link">
+          <div class="logo">
+              <img class="icon" src="../resources/icon.png" />
+          </div>
+        </a>
+
+        <div class="title">
+          <h2><small>Dorfgarage Meier & Staubli</small></h2>
+          <h1>Preise & Leistungen</h1>
+        </div>
+      </header>
+
+          
+      <main class="materialize-overwrite">
+      
+        <div class="row">
+
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image mobile-hide">
+                <img src="../resources/price.jpg">
+              </div>
+              <div class="card-content">
+                <p><small>Stundenansatz</small></p>
+                <p>90.- CHF</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image mobile-hide">
+                <img src="../resources/motor1.jpg">
+              </div>
+              <div class="card-content">
+                <p><small>Abgastest Benzinmotor</small></p>
+                <p>70.- CHF</p>
+              </div>
+            </div>
+          </div>
         
-  <main class="container">
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image mobile-hide">
+                <img src="../resources/motor2.png">
+              </div>
+              <div class="card-content">
+                <p><small>Abgastest Dieselmotor</small></p>
+                <p>90.- CHF</p>
+              </div>
+            </div>
+          </div>
 
-  </main>
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image mobile-hide">
+                <img src="../resources/rad_wechsel.jpg">
+              </div>
+              <div class="card-content">
+                <p><small>Radwechsel & Auswuchten</small></p>
+                <p>52.- CHF</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+
+        <!-- Telefon -->
+        <section class="row" style="margin-top: 60px">
+          <div class="col s12">
+            <a href="tel:+41564967029">
+              <summary class="primary waves-effect waves-light">
+                <p class="text__small">Rufen Sie uns an</p>
+                <p>+41 56 496 70 29</p>
+              </summary>
+            </a>
+          </div>
+        </section>
+
+        <!-- Lage & Kontakt -->
+        <section class="row" style="margin-bottom: 60px">
+          <div class="col s12">
+            <a href="./contact.html" class="link">
+              <summary class="secondary waves-effect waves-light">
+                <p>Lage <small>&</small> Kontakt</p>
+              </summary>
+            </a>
+          </div>
+        </section>
+            
+      </main>
+    </div>
+  </div>
 
   <!--JavaScript at end of body for optimized loading-->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="../js/materialize.min.js"></script>
+  <script src="../js/script.js"></script>
+
         
 </body>
 </html>

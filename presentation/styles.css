@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+}
+body {
+  background: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  font-family: 'Didact Gothic';font-size: 22px;
+}
+
+#page {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain; 
+  background-position: right;
+}
+
+#page.persona-face {
+  background-image: url('persone.face.png');
+}
+
+#page.persona-car {
+  background-image: url('persona.car.png');
+}
+
+#page.google-search {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#page a {
+  color: black;
+}
+
+#content {
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
+  overflow-y: scroll;
+}
+

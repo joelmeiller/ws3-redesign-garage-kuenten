@@ -11,9 +11,6 @@
   <!--Local styles-->
   <link rel="stylesheet" href="../css/styles.css?v=1.0">
   
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  
   <!-- Materialize -->
   <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
 
@@ -22,7 +19,8 @@
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
   
-  <!--Let browser know website is optimized for mobile-->
+
+    <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <!--[if lt IE 9]>
@@ -32,12 +30,12 @@
 </head>
 
 <body>
-  <div class="page">
+  <div id="page">
 
-    <div class="content">
+    <div id="content">
 
       <header class="sub-page">
-        <a href="../index.html">
+        <a href="../index.html" class="link">
           <div class="logo">
               <img class="icon" src="../resources/icon.png" />
           </div>
@@ -49,9 +47,9 @@
         </div>
       </header>
 
-      <main>
+      <main class="materialize-overwrite">
         <!-- Karte -->
-        <div class="row overwrite">
+        <div class="row">
           <div class="col s12">
             <div class="card">
               <div class="card-image">
@@ -82,7 +80,7 @@
         </section>
   
         <!-- Formular -->
-        <div class="row overwrite" style="margin-top: 60px">
+        <div class="row" style="margin-top: 60px">
           <form class="col white-text s12">
             <div class="card">
               <div class="card-content">
@@ -115,7 +113,18 @@
                     </div>
                   
                     <div class="input-field col s12">
-                        <a class="waves-effect waves-light btn">Senden</a>
+                        <a class="waves-effect waves-light btn" onclick="openModal('send-confirmation-modal')">Senden</a>
+                    
+                      <!-- Send Confirmation Modal -->
+                      <div id="send-confirmation-modal" class="modal">
+                        <div class="modal-content">        
+                          <p>Nachricht wurde gesendet</p>
+                          <p style="margin-top: 10px"><i class="material-icons large">check</i></p>
+                        </div>
+                        <div class="modal-footer">
+                          <a class="modal-action modal-close waves-effect waves-green btn-flat" onclick="closeModal('send-confirmation-modal')">Schliessen</a>                              
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -128,8 +137,15 @@
       </main>
     </div>
   </div>
+
+
   
-<script src="../js/materialize.min.js"></script>
+  
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="../js/materialize.min.js"></script>
+  <script src="../js/script.js"></script>
+  
 
 </body>
 </html>

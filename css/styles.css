@@ -1,12 +1,14 @@
 /* ------------------- General ------------------- */
 :root {
-  --main-primary-color: rgb(167, 0, 0);
+  --main-primary-color: rgb(168, 0, 0);
   --main-font-color: #c2c2c2;
   --main-font-color-accent: #ffffff;
-  --main-bg-card-color: rgba(167, 0, 0, 0.32);
+  --main-bg: rgb(75, 0, 0);
+  --main-bg-card-color: rgba(167, 0, 0, 0.45);
   --main-bg-card-color-hover: rgba(223, 65, 44, 0.9);
-  --main-bg-card-color-primary: rgb(164, 46, 30, 0.9);
-  --main-bg-card-color-primary-hover: orangered;
+  --main-bg-card-color-primary: rgba(164, 46, 30, 0.9);
+  --main-bg-card-color-primary-hover: orange;
+  --main-bg-modal-color: rgb(164, 46, 30);
 }
 
 
@@ -28,7 +30,7 @@ html, body {
   height: 100%;
 }
 body {
-  background: darkred;
+  background: var(--main-bg);
   border: 4px solid var(--main-primary-color);
   overflow-x: hidden;
   overflow-y: hidden;
@@ -40,7 +42,7 @@ body {
 
 /* ------------------- Page -----------------*/
 
-.page {
+#page {
   position: absolute;
   width: calc(100vw - 8px);
   height: calc(100vh - 8px);
@@ -55,7 +57,7 @@ body {
   background-position: center;
 }
 
-.page:before {
+#page:before {
   position: absolute;
   content: ' ';
   height: 100%;
@@ -68,7 +70,7 @@ body {
   transition: background 3s ease-in-out;
 }
 
-.content {
+#content {
   position: relative;
   width: 100%;
   padding: 0 5%;
@@ -301,35 +303,22 @@ summary:hover p {
   }  
 }
 
-/* ------------------- Offering ------------------- */
-
-
-#offer-bg-cont{
-  background-color: transparent;
-}
-
-.col > p{
-  color: var(--main-font-color);
-  background-color: var(--main-bg-card-color);
-  text-align: center;
-  min-height: 80px;
-
-}
+/* ------------------- Cart ------------------- */
 
 /* override materialize CSS colors */
-.overwrite .card {
+.materialize-overwrite .card {
   background-color: var(--main-bg-card-color);
 }
-.overwrite .card .card-image img {
+.materialize-overwrite .card .card-image img {
   height: 150px;
   object-fit: cover;
 }
-.overwrite .card .card-content {
+.materialize-overwrite .card .card-content {
   color: var(--main-font-color);
   padding: 8px 20px 12px 20px;
 }
 
-/* ------------------- Form colors ------------------- */
+/* ------------------- Form ------------------- */
 /* label color */
 .input-field label {
     color: #fff !important;
@@ -352,11 +341,51 @@ textarea:focus {
     box-shadow: 0 1px 0 0 #fff !important;
 }
 
-.overwrite .btn {
+.materialize-overwrite .btn {
   width: 100%;
   background-color: var(--main-bg-card-color-primary);
 }
 
-.overwrite .btn:hover {
+.materialize-overwrite .btn:hover {
   background-color: var(--main-bg-card-color-primary-hover);
+}
+
+/* ------------------- Modal ------------------- */
+
+/* override materialize CSS colors */
+.materialize-overwrite .modal {
+  background-color: var(--main-bg-modal-color);
+  color: var(--main-font-color-accent);
+  outline: none;
+}
+
+.materialize-overwrite .modal .modal-content p {
+  text-align: center;
+}
+
+.materialize-overwrite .modal .modal-footer {
+  background-color: var(--main-bg-modal-color);
+  color: var(--main-font-color-accent);
+  font-weight: bold;
+}
+
+.materialize-overwrite .modal .modal-footer .btn-flat {
+  background-color: var(--main-bg-modal-color);
+  color: var(--main-font-color-accent);
+  font-weight: bold;
+}
+
+/* ------------- Page Transition ------------ */
+#content {
+	opacity: 0;
+	transition: opacity .125s ease-in-out;
+ 	-moz-transition: opacity .125s ease-in-out;
+ 	-webkit-transition: opacity .125s ease-in-out;
+}
+
+#content.visible {
+	opacity: 1;
+	transition: opacity .125s ease-in-out;
+ 	-moz-transition: opacity .125s ease-in-out;
+ 	-webkit-transition: opacity .125s ease-in-out;
 }

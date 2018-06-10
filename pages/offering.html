@@ -11,9 +11,6 @@
   <!--Local styles-->
   <link rel="stylesheet" href="../css/styles.css?v=1.0">
   
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  
   <!-- Materialize -->
   <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
 
@@ -21,7 +18,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-  
+
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -32,12 +29,12 @@
 </head>
 
 <body>
-  <div class="page">
+  <div id="page">
 
-    <div class="content">
+    <div id="content">
 
       <header class="sub-page">
-        <a href="../index.html">
+        <a href="../index.html" class="link">
           <div class="logo">
               <img class="icon" src="../resources/icon.png" />
           </div>
@@ -50,9 +47,9 @@
       </header>
 
           
-      <main>
+      <main class="materialize-overwrite">
       
-        <div class="row overwrite">
+        <div class="row">
 
           <div class="col s12 m6">
             <div class="card">
@@ -120,7 +117,7 @@
         <!-- Lage & Kontakt -->
         <section class="row" style="margin-bottom: 60px">
           <div class="col s12">
-            <a href="./contact.html">
+            <a href="./contact.html" class="link">
               <summary class="secondary waves-effect waves-light">
                 <p>Lage <small>&</small> Kontakt</p>
               </summary>
@@ -133,7 +130,10 @@
   </div>
 
   <!--JavaScript at end of body for optimized loading-->
-  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="../js/materialize.min.js"></script>
+  <script src="../js/script.js"></script>
+
         
 </body>
 </html>

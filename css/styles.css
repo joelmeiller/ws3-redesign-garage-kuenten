@@ -199,6 +199,16 @@ header.sub-page .title h2 {
 }
 
 @media (max-width: 600px) {
+  header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
   header .logo {
     top: 10px;
     left: 10px;
@@ -385,7 +395,7 @@ textarea:focus {
 
 #content.visible {
 	opacity: 1;
-	transition: opacity .125s ease-in;
- 	-moz-transition: opacity .125s ease-in;
- 	-webkit-transition: opacity .125s ease-in;
+	transition: opacity .25s ease-in;
+ 	-moz-transition: opacity .25s ease-in;
+ 	-webkit-transition: opacity .25s ease-in;
 }
